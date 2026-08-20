@@ -71,7 +71,7 @@ export default function App() {
     const currentTheme = storageService.getTheme();
     storageService.setTheme(currentTheme);
 
-    // Detect public card in URL
+    // Detect public card in URL parameters (?cardId=xxx)
     const urlParams = new URLSearchParams(window.location.search);
     const cardIdParam = urlParams.get('cardId');
     if (cardIdParam) {
@@ -79,10 +79,20 @@ export default function App() {
       return;
     }
 
+    // Check direct pathname /cartao/:id
+    const pathname = window.location.pathname;
+    if (pathname.startsWith('/cartao/')) {
+      const id = pathname.replace('/cartao/', '').split('/')[0]?.trim();
+      if (id) {
+        setPublicCardId(id);
+        return;
+      }
+    }
+
     // Check hash route #/cartao/:id
     const hash = window.location.hash;
     if (hash.startsWith('#/cartao/')) {
-      const id = hash.replace('#/cartao/', '');
+      const id = hash.replace('#/cartao/', '').split('?')[0]?.trim();
       if (id) {
         setPublicCardId(id);
         return;
@@ -316,20 +326,23 @@ export default function App() {
     }
 
     return (
-      <PublicCardView
-        card={publicData.card}
-        customer={publicData.customer}
-        business={publicData.business}
-        program={publicData.program}
-        onBackToApp={
-          currentUser
-            ? () => {
-                setPublicCardId(null);
-                window.history.replaceState({}, '', '/');
-              }
-            : undefined
-        }
-      />
+      <>
+        <InstallPwaPrompt />
+        <PublicCardView
+          card={publicData.card}
+          customer={publicData.customer}
+          business={publicData.business}
+          program={publicData.program}
+          onBackToApp={
+            currentUser
+              ? () => {
+                  setPublicCardId(null);
+                  window.history.replaceState({}, '', '/');
+                }
+              : undefined
+          }
+        />
+      </>
     );
   }
 
