@@ -1,0 +1,6 @@
+{
+  "name": "Fideliza+",
+  "description": "Plataforma de cartão fidelidade digital PWA para pequenos negócios.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

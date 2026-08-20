@@ -1,0 +1,24 @@
+{
+  "name": "Fideliza+ | Cartão Fidelidade Digital",
+  "short_name": "Fideliza+",
+  "description": "Seu cliente volta. Seu negócio cresce. Cartão fidelidade digital para pequenos negócios.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

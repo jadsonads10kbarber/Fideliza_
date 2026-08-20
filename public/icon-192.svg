@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <linearGradient id="grad192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="gold192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="42" fill="url(#grad192)" />
+  <rect x="28" y="44" width="136" height="96" rx="16" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-opacity="0.3" stroke-width="3" />
+  <!-- Card Header Line -->
+  <line x1="42" y1="68" x2="90" y2="68" stroke="#ffffff" stroke-width="4" stroke-linecap="round" />
+  <line x1="42" y1="80" x2="70" y2="80" stroke="#93c5fd" stroke-width="3" stroke-linecap="round" />
+  <!-- Stamp Circles -->
+  <circle cx="48" cy="112" r="9" fill="url(#gold192)" />
+  <circle cx="74" cy="112" r="9" fill="url(#gold192)" />
+  <circle cx="100" cy="112" r="9" fill="url(#gold192)" />
+  <circle cx="126" cy="112" r="9" fill="#ffffff" fill-opacity="0.25" stroke="#ffffff" stroke-width="2" stroke-dasharray="3 3" />
+  <!-- Plus Badge -->
+  <circle cx="140" cy="52" r="18" fill="url(#gold192)" stroke="#1e40af" stroke-width="3" />
+  <path d="M140 44 v16 M132 52 h16" stroke="#1e293b" stroke-width="3.5" stroke-linecap="round" />
+</svg>
